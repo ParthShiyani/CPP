@@ -1,0 +1,62 @@
+#include<iostream.h>
+#include<conio.h>
+
+class A
+{
+	int age;
+	protected:
+
+	A()
+	{
+		cout<<"enter father's age=";
+		cin>>age;
+	}
+	void getf()
+	{
+		cout<<"father's age="<<age<<endl;
+	}
+};
+class B:public A
+{
+	int age;
+	public:
+
+	B()
+	{
+		cout<<"enter s1's age=";
+		cin>>age;
+	}
+	void gets1()
+	{
+		getf();
+		cout<<"s1's age="<<age<<endl;
+	}
+};
+class C:public A
+{
+	int age;
+	public:
+
+	C()
+	{
+		cout<<"enter s2 age=";
+		cin>>age;
+	}
+	void gets2()
+	{
+		getf();
+		cout<<"s2's age ="<<age;
+	}
+};
+void main()
+{
+	clrscr();
+	B b;
+	C c;
+
+	b.gets1();
+	c.gets2();
+	getch();
+}
+
+
